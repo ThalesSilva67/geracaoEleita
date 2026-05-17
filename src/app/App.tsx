@@ -31,17 +31,17 @@ export default function App() {
             <span className="inline-block px-3 py-1.5 bg-[var(--gold)] text-[var(--navy)] font-black text-xs uppercase mb-4 rounded-sm">
               Futebol • Educação • Impacto
             </span>
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] uppercase tracking-tighter mb-6">
-              Geração <br /> <span className="text-[var(--gold)]">Eleita</span>
+            <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] uppercase tracking-tighter mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+              Geração <br /> <span className="text-[var(--gold)] drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">Eleita</span>
             </h1>
-            <p className="text-xl md:text-2xl font-bold text-white/80 mb-8 max-w-xl leading-snug">
-              O evangelho transforma. Projeto 100% voluntário
-            </p>
             <button onClick={() => window.open(VARIABLE_PAYMENT_LINK, '_blank', 'noopener,noreferrer')} className="group flex items-center gap-3 bg-white text-[var(--navy)] px-8 py-4 rounded-full font-black text-lg transition-all hover:bg-[var(--gold)] cursor-pointer">
-              QUERO AJUDAR <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform " />
+              QUERO AJUDAR <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
           </div>
         </div>
+         <p className="absolute bottom-8 left-6 text-xl font-bold text-white max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,1)] border-l-4 border-[var(--gold)] pl-4">
+              O evangelho transforma vidas. Projeto 100% voluntário
+            </p>
       </section>
 
       {/* 2. STATS - Centralizado */}
