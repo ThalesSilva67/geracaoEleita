@@ -5,15 +5,14 @@ export default function App() {
   const VARIABLE_PAYMENT_LINK = "https://buy.stripe.com/test_00w14pcsA1fd7yDbZ99AA04";
 
   const donationOptions = [
-    { name: "Cartão Amarelo", amount: 20, description: "Ajude com equipamentos básicos", color: "var(--gold)", link: "https://buy.stripe.com/test_6oU9AV9goga7bOTd3d9AA03" },
-    { name: "Camisa 10", amount: 50, description: "Patrocine o kit mensal de um aluno", color: "var(--gold)", link: "https://buy.stripe.com/test_bJebJ31NW4rp5qvbZ99AA02"},
-    { name: "Golaço", amount: 100, description: "Apoie taxas de torneio e nutrição", color: "var(--gold)", link: "https://buy.stripe.com/test_cNi4gB9goga7aKP9R19AA01" }
+    { name: "Cartão Amarelo", amount: 20, description: "Ajude com equipamentos básicos", color: "var(--gold)", link: "https://buy.stripe.com/test_6oU9AV9goga7bOTd3d9AA03",img: "favicon.png" },
+    { name: "Camisa 10", amount: 50, description: "Patrocine o kit mensal de um aluno", color: "var(--gold)", link: "https://buy.stripe.com/test_bJebJ31NW4rp5qvbZ99AA02" ,img: "favicon.png" },
+    { name: "Golaço", amount: 100, description: "Apoie taxas de torneio e nutrição", color: "var(--gold)", link: "https://buy.stripe.com/test_cNi4gB9goga7aKP9R19AA01" ,img: "favicon.png" }
   ];
 
   const leaders = [
-    { name: "Pastor Marcos Silva", role: "Fundador & Diretor", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" },
-    { name: "Ana Ferreira", role: "Coordenadora Pedagógica", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" },
-    { name: "Carlos Mendes", role: "Treinador Principal", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" }
+    { name: "Naiara Pereira", role: "Fundadora", image: "naiara.png" },
+    { name: "Marido de Naiara", role: "Fundador", image: "" }
   ];
 
   return (
@@ -23,8 +22,8 @@ export default function App() {
       <section className="relative h-[80vh] flex items-center justify-start overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=1920"
-            className="w-full h-full object-cover brightness-[0.35]"
+            src="banner.png"
+            className="w-full h-full object-cover scale-105"
           />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
@@ -38,8 +37,8 @@ export default function App() {
             <p className="text-xl md:text-2xl font-bold text-white/80 mb-8 max-w-xl leading-snug">
               O evangelho transforma. Projeto 100% voluntário
             </p>
-            <button onClick={() => window.open(VARIABLE_PAYMENT_LINK, '_blank', 'noopener,noreferrer')} className="group flex items-center gap-3 bg-white text-[var(--navy)] px-8 py-4 rounded-full font-black text-lg transition-all hover:bg-[var(--gold)]">
-              QUERO AJUDAR <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            <button onClick={() => window.open(VARIABLE_PAYMENT_LINK, '_blank', 'noopener,noreferrer')} className="group flex items-center gap-3 bg-white text-[var(--navy)] px-8 py-4 rounded-full font-black text-lg transition-all hover:bg-[var(--gold)] cursor-pointer">
+              QUERO AJUDAR <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform " />
             </button>
           </div>
         </div>
@@ -67,7 +66,7 @@ export default function App() {
             </div>
             <div className="border-l-4 border-[var(--gold)] pl-6 flex flex-col justify-center w-fit">
               <h2 className="text-6xl font-black leading-none mb-2 tracking-tighter text-left">
-                80
+                +80
               </h2>
               <p className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-white/50 text-left">
                 Alunos Inscritos
@@ -86,9 +85,9 @@ export default function App() {
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { t: "Missão", d: "Transformar a realidade de jovens através do esporte.", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600" },
-            { t: "Visão", d: "Ser referência em inclusão social até 2030.", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600" },
-            { t: "Valores", d: "Fé, Disciplina e Respeito acima de tudo.", img: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=600" }
+            { t: "Missão", d: "Transformar a realidade de jovens através do esporte.", img: "campo.png" },
+            { t: "Visão", d: "Ser referência em inclusão social até 2030.", img: "trofeu.png"},
+            { t: "Valores", d: "Fé, Disciplina e Respeito acima de tudo.", img: "valores.png" }
           ].map((item, i) => (
             <div key={i} className="relative group h-[400px] overflow-hidden rounded-[32px] shadow-lg">
               <ImageWithFallback src={item.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -145,19 +144,37 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {donationOptions.map((opt, i) => (
-              <div key={i} className="bg-[var(--navy)] p-12 rounded-[48px] text-center shadow-2xl transition-transform hover:-translate-y-4 duration-300 flex flex-col justify-between h-full">
-                <div className="space-y-6">
-                  <span className="text-[var(--gold)] text-lg font-black uppercase tracking-widest block">{opt.name}</span>
-                  <div className="text-7xl font-black text-white tracking-tighter">R$ {opt.amount}</div>
-                  <p className="text-base text-white/70 font-medium">{opt.description}</p>
-                </div>
-                <button onClick={() => window.open(opt.link, '_blank', 'noopener,noreferrer')} className="mt-10 w-full py-5 bg-[var(--gold)] text-[var(--navy)] rounded-2xl font-black text-xl uppercase shadow-lg hover:brightness-110 transition-all">
-                  DOAR AGORA
-                </button>
+          {donationOptions.map((opt, i) => (
+            <div key={i} className="relative bg-[var(--navy)] p-12 rounded-[48px] text-center shadow-2xl transition-transform hover:-translate-y-4 duration-300 flex flex-col justify-between h-full overflow-hidden">
+              
+              {opt.img && (
+                <img
+                  src={opt.img}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              )}
+
+              {/* Overlay escuro */}
+              <div className="absolute inset-0 bg-[var(--navy)]/40 rounded-[48px]" />
+
+              <div className="relative z-10 space-y-6">
+              <span className="text-[var(--gold)] text-lg font-black uppercase tracking-widest block drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                {opt.name}
+              </span>
+              <div className="text-7xl font-black text-white tracking-tighter drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                R$ {opt.amount}
               </div>
-            ))}
-          </div>
+              <p className="text-base text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                {opt.description}
+              </p>
+            </div>
+
+      <button onClick={() => window.open(opt.link, '_blank', 'noopener,noreferrer')} className="relative z-10 mt-10 w-full py-5 bg-[var(--gold)] text-[var(--navy)] rounded-2xl font-black text-xl uppercase shadow-lg hover:brightness-110 transition-all cursor-pointer">
+        DOAR AGORA
+      </button>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
