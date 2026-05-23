@@ -69,29 +69,30 @@ export default function App() {
   ];
 
   const sponsors = [
-    { name: "Patrocinador1", image: "" },
-    { name: "Patrocinador2",  image: "" },
+    { name: "Cuca Legal", image: "patrocinador1.jpeg" },
+    { name: "Los Pampas",  image: "patrocinador2.png" },
+    { name: "MCR Tecnologia",  image: "patrocinador3.png" },
   ];
 
   const dnaData = [
     { 
       t: "Missão", 
       d: "Transformar a realidade de jovens através do esporte.", 
-      fullText: "Nossa missão é usar o esporte como uma poderosa ferramenta de transformação social. Buscamos resgatar jovens de situações de vulnerabilidade, oferecendo oportunidades reais de desenvolvimento físico, mental e espiritual, preparando-os não apenas para o campo, mas para o jogo da vida.",
+      fullText: "Ser referência em desenvolvedor cidadãos com valores do céu através dos esporte e suporte para familias carentes.",
       img: "campo.png", 
       ref: dnaCard1 
     },
     { 
       t: "Visão",  
-      d: "Ser referência em inclusão social até 2030.", 
-      fullText: "Almejamos ser reconhecidos nacionalmente como um modelo de excelência em projetos sociais esportivos. Queremos expandir nosso impacto para abraçar cada vez mais famílias, formando cidadãos conscientes e criando uma rede de apoio sólida e duradoura nas comunidades onde atuamos.",
+      d: "Ser referência em inclusão social.", 
+      fullText: "Ser reconhecida como uma escola de futebol de referência na formação de crianças e adolescentes, baseada em princípios cristãos, promovendo desenvolvimento esportivo, humano e espiritual.\n\n\nE tornar-se o INSTITUTO GERAÇÃO ELEITA, oferecendo apoio às famílias, capacitação profissional, cursos, treinamentos e atividades culturais e educacionais que transformem vidas.",
       img: "trofeu.png",  
       ref: dnaCard2 
     },
     { 
       t: "Valores",
-      d: "Fé, Disciplina e Respeito acima de tudo.", 
-      fullText: "Pautamos nossas ações nos princípios cristãos. Acreditamos que a fé move montanhas e transforma destinos, a disciplina constrói o caráter e o respeito ao próximo é a base fundamental de qualquer equipe vencedora e de uma sociedade mais justa.",
+      d: "Princípios que formam cidadãos dentro e fora de campo.", 
+      fullText: "Cooperação\nFé\nAmizade\nRespeito\nPerdão e acima de tudo, amor.",
       img: "valores.png", 
       ref: dnaCard3 
     },
@@ -251,9 +252,19 @@ export default function App() {
                   {popupDNA.t}
                 </h3>
                 
-                <p className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed">
-                  {popupDNA.fullText}
-                </p>
+                <div className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed">
+                  {popupDNA.fullText.split('\n').map((linha, index) => (
+                    // Se a linha estiver vazia (porque você usou \n\n), cria um espaço fixo de 16px
+                    linha.trim() === "" ? (
+                      <div key={index} className="h-4"></div>
+                    ) : (
+                      // Se a linha tiver texto, renderiza o parágrafo normal
+                      <span key={index} className="block mb-2">
+                        {linha}
+                      </span>
+                    )
+                  ))}
+                </div>
               </div>
             </div>
           )}
