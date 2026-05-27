@@ -17,11 +17,11 @@ export default function App() {
 
   const VARIABLE_PAYMENT_LINK = "https://buy.stripe.com/test_00w14pcsA1fd7yDbZ99AA04";
 
-    // ── Hero refs
-  const heroTag   = useReveal({ direction: 'up', delay: 0 });
+  // ── Hero refs
+  const heroTag = useReveal({ direction: 'up', delay: 0 });
   const heroTitle = useReveal({ direction: 'up', delay: 120 });
-  const heroCta   = useReveal({ direction: 'up', delay: 240 });
-  const heroLine  = useReveal({ direction: 'up', delay: 360 });
+  const heroCta = useReveal({ direction: 'up', delay: 240 });
+  const heroLine = useReveal({ direction: 'up', delay: 360 });
 
   // ── Stats refs
   const stat1 = useReveal({ direction: 'up', delay: 0 });
@@ -36,24 +36,24 @@ export default function App() {
 
   // ── Versículo refs
   const versQuote = useReveal({ direction: 'fade' });
-  const versRef   = useReveal({ direction: 'up', delay: 200 });
+  const versRef = useReveal({ direction: 'up', delay: 200 });
 
   // ── Líderes refs
   const leadTitle = useReveal({ direction: 'left' });
-  const leadSub   = useReveal({ direction: 'right', delay: 100 });
-  const lead1     = useReveal({ direction: 'up', delay: 0 });
-  const lead2     = useReveal({ direction: 'up', delay: 180 });
+  const leadSub = useReveal({ direction: 'right', delay: 100 });
+  const lead1 = useReveal({ direction: 'up', delay: 0 });
+  const lead2 = useReveal({ direction: 'up', delay: 180 });
 
   // ── Doações refs
-  const doaTitle  = useReveal({ direction: 'up' });
-  const doaSub    = useReveal({ direction: 'up', delay: 120 });
-  const doaCard1  = useReveal({ direction: 'up', delay: 0 });
-  const doaCard2  = useReveal({ direction: 'up', delay: 150 });
-  const doaCard3  = useReveal({ direction: 'up', delay: 300 });
+  const doaTitle = useReveal({ direction: 'up' });
+  const doaSub = useReveal({ direction: 'up', delay: 120 });
+  const doaCard1 = useReveal({ direction: 'up', delay: 0 });
+  const doaCard2 = useReveal({ direction: 'up', delay: 150 });
+  const doaCard3 = useReveal({ direction: 'up', delay: 300 });
 
   // ── Footer refs
-  const footBrand   = useReveal({ direction: 'up', delay: 0 });
-  const footLinks   = useReveal({ direction: 'up', delay: 120 });
+  const footBrand = useReveal({ direction: 'up', delay: 0 });
+  const footLinks = useReveal({ direction: 'up', delay: 120 });
   const footContact = useReveal({ direction: 'up', delay: 240 });
 
 
@@ -65,36 +65,36 @@ export default function App() {
 
   const leaders = [
     { name: "Jones Kleber & Naiara Pereira", role: "Fundadores", image: "fundadores.jpeg" },
-    { name: "Voluntários",role: "Voluntários",  image: "voluntarios.jpeg" },
+    { name: "Voluntários", role: "Voluntários", image: "voluntarios.jpeg" },
   ];
 
   const sponsors = [
     { name: "Cuca Legal", image: "patrocinador1.jpeg" },
-    { name: "Los Pampas",  image: "patrocinador2.png" },
-    { name: "MCR Tecnologia",  image: "patrocinador3.png" },
+    { name: "Los Pampas", image: "patrocinador2.png" },
+    { name: "MCR Tecnologia", image: "patrocinador3.png" },
   ];
 
   const dnaData = [
-    { 
-      t: "Missão", 
-      d: "Transformar a realidade de jovens através do esporte.", 
+    {
+      t: "Missão",
+      d: "Transformar a realidade de jovens através do esporte.",
       fullText: "Ser referência em desenvolvedor cidadãos com valores do céu através dos esporte e suporte para familias carentes.",
-      img: "campo.png", 
-      ref: dnaCard1 
+      img: "campo.png",
+      ref: dnaCard1
     },
-    { 
-      t: "Visão",  
-      d: "Ser referência em inclusão social.", 
+    {
+      t: "Visão",
+      d: "Ser referência em inclusão social.",
       fullText: "Ser reconhecida como uma escola de futebol de referência na formação de crianças e adolescentes, baseada em princípios cristãos, promovendo desenvolvimento esportivo, humano e espiritual.\n\n\nE tornar-se o INSTITUTO GERAÇÃO ELEITA, oferecendo apoio às famílias, capacitação profissional, cursos, treinamentos e atividades culturais e educacionais que transformem vidas.",
-      img: "trofeu.png",  
-      ref: dnaCard2 
+      img: "trofeu.png",
+      ref: dnaCard2
     },
-    { 
+    {
       t: "Valores",
-      d: "Princípios que formam cidadãos dentro e fora de campo.", 
+      d: "Princípios que formam cidadãos dentro e fora de campo.",
       fullText: "Cooperação\nFé\nAmizade\nRespeito\nPerdão e acima de tudo, amor.",
-      img: "valores.png", 
-      ref: dnaCard3 
+      img: "valores.png",
+      ref: dnaCard3
     },
   ];
 
@@ -105,7 +105,7 @@ export default function App() {
 
       {/* ── 1. HERO ───────────────────────────────────── */}
       <section className="relative h-[80vh] flex items-center justify-start overflow-hidden">
-        
+
         {/*
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
@@ -186,93 +186,93 @@ export default function App() {
         </div>
       </section>
 
-        {/* ── 3. DNA ────────────────────────────────────── */}
-        <section id="historia" className="py-24 px-6 bg-white relative">
-          <div className="max-w-7xl mx-auto mb-12 text-center md:text-left">
-            <h2
-              ref={dnaTitle}
-              className="text-5xl md:text-7xl font-black text-[var(--navy)] uppercase tracking-tighter leading-none mb-8"
-            >
-              Nosso <span className="text-[var(--burgundy)]">DNA</span>
-            </h2>
-            
-            <div className="max-w-4xl mx-auto md:mx-0 border-l-4 border-[var(--gold)] pl-6 text-left">
-              <p className="text-lg md:text-xl font-bold text-gray-500 italic leading-relaxed">
-                "Mas vós sois a geração eleita, o sacerdócio real, a nação santa, o povo adquirido, para que anuncieis as virtudes daquele que vos chamou das trevas para a sua maravilhosa luz."
-              </p>
-              <p className="text-[var(--navy)] font-black uppercase tracking-widest mt-3 text-sm">
-                1 Pedro 2:9
-              </p>
-            </div>
-          </div>
+      {/* ── 3. DNA ────────────────────────────────────── */}
+      <section id="historia" className="py-24 px-6 bg-white relative">
+        <div className="max-w-7xl mx-auto mb-12 text-center md:text-left">
+          <h2
+            ref={dnaTitle}
+            className="text-5xl md:text-7xl font-black text-[var(--navy)] uppercase tracking-tighter leading-none mb-8"
+          >
+            Nosso <span className="text-[var(--burgundy)]">DNA</span>
+          </h2>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Usando a variável dnaData e adicionando onClick */}
-            {dnaData.map((item) => (
-              <div
-                key={item.t}
-                ref={item.ref}
-                onClick={() => setPopupDNA(item)} 
-                className="relative group h-[400px] overflow-hidden rounded-[32px] shadow-lg cursor-pointer"
-              >
-                <ImageWithFallback
-                  src={item.img}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)] via-[var(--navy)]/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <h4 className="text-2xl font-black text-[var(--gold)] uppercase mb-2 flex items-center justify-between">
-                    {item.t}
-                    <ArrowRight className="w-5 h-5 text-[var(--gold)] opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300" />
-                  </h4>
-                  <p className="text-lg font-bold text-white leading-tight opacity-90">{item.d}</p>
-                </div>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto md:mx-0 border-l-4 border-[var(--gold)] pl-6 text-left">
+            <p className="text-lg md:text-xl font-bold text-gray-500 italic leading-relaxed">
+              "Mas vós sois a geração eleita, o sacerdócio real, a nação santa, o povo adquirido, para que anuncieis as virtudes daquele que vos chamou das trevas para a sua maravilhosa luz."
+            </p>
+            <p className="text-[var(--navy)] font-black uppercase tracking-widest mt-3 text-sm">
+              1 Pedro 2:9
+            </p>
           </div>
+        </div>
 
-          {/* ── CÓDIGO DO POPUP (MODAL) ── */}
-          {popupDNA && (
-            <div 
-              className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-              onClick={() => setPopupDNA(null)} // Fecha ao clicar fora
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Usando a variável dnaData e adicionando onClick */}
+          {dnaData.map((item) => (
+            <div
+              key={item.t}
+              ref={item.ref}
+              onClick={() => setPopupDNA(item)}
+              className="relative group h-[400px] overflow-hidden rounded-[32px] shadow-lg cursor-pointer"
             >
-              <div 
-                className="bg-white rounded-3xl p-8 md:p-12 max-w-2xl w-full relative shadow-2xl animate-fade-in-up"
-                onClick={(e) => e.stopPropagation()} // Evita fechar ao clicar dentro do card
-              >
-                <button 
-                  className="absolute top-6 right-6 p-2 text-gray-400 hover:text-[var(--burgundy)] hover:bg-gray-100 rounded-full transition-all"
-                  onClick={() => setPopupDNA(null)}
-                >
-                  <X size={24} className='cursor-pointer'/>
-                </button>
-                
-                <h3 className="text-3xl md:text-4xl font-black text-[var(--navy)] uppercase mb-6 border-b-4 border-[var(--gold)] pb-2 inline-block">
-                  {popupDNA.t}
-                </h3>
-                
-                <div className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed">
-                  {popupDNA.fullText.split('\n').map((linha, index) => (
-                    // Se a linha estiver vazia (porque você usou \n\n), cria um espaço fixo de 16px
-                    linha.trim() === "" ? (
-                      <div key={index} className="h-4"></div>
-                    ) : (
-                      // Se a linha tiver texto, renderiza o parágrafo normal
-                      <span key={index} className="block mb-2">
-                        {linha}
-                      </span>
-                    )
-                  ))}
-                </div>
+              <ImageWithFallback
+                src={item.img}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)] via-[var(--navy)]/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <h4 className="text-2xl font-black text-[var(--gold)] uppercase mb-2 flex items-center justify-between">
+                  {item.t}
+                  <ArrowRight className="w-5 h-5 text-[var(--gold)] opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300" />
+                </h4>
+                <p className="text-lg font-bold text-white leading-tight opacity-90">{item.d}</p>
               </div>
             </div>
-          )}
-        </section>
+          ))}
+        </div>
+
+        {/* ── CÓDIGO DO POPUP (MODAL) ── */}
+        {popupDNA && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            onClick={() => setPopupDNA(null)} // Fecha ao clicar fora
+          >
+            <div
+              className="bg-white rounded-3xl p-8 md:p-12 max-w-2xl w-full relative shadow-2xl animate-fade-in-up"
+              onClick={(e) => e.stopPropagation()} // Evita fechar ao clicar dentro do card
+            >
+              <button
+                className="absolute top-6 right-6 p-2 text-gray-400 hover:text-[var(--burgundy)] hover:bg-gray-100 rounded-full transition-all"
+                onClick={() => setPopupDNA(null)}
+              >
+                <X size={24} className='cursor-pointer' />
+              </button>
+
+              <h3 className="text-3xl md:text-4xl font-black text-[var(--navy)] uppercase mb-6 border-b-4 border-[var(--gold)] pb-2 inline-block">
+                {popupDNA.t}
+              </h3>
+
+              <div className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed">
+                {popupDNA.fullText.split('\n').map((linha, index) => (
+                  // Se a linha estiver vazia (porque você usou \n\n), cria um espaço fixo de 16px
+                  linha.trim() === "" ? (
+                    <div key={index} className="h-4"></div>
+                  ) : (
+                    // Se a linha tiver texto, renderiza o parágrafo normal
+                    <span key={index} className="block mb-2">
+                      {linha}
+                    </span>
+                  )
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
 
       {/* ── 4. Frase ──────────────────────────────── */}
       <section className="relative w-full overflow-hidden text-center">
-  
+
         {/* Imagem de fundo ocupando 100% da section */}
         <ImageWithFallback
           src="allInCampo.png"
@@ -280,11 +280,11 @@ export default function App() {
         />
 
         {/* Overlay escuro para dar contraste ao texto */}
-        <div className="absolute inset-0 bg-black/45"/>
+        <div className="absolute inset-0 bg-black/45" />
 
         {/* Container do texto - Mantém a largura máxima para não esticar em telas gigantes */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:px-20 md:py-20 flex flex-col justify-center items-center">
-          
+
           <blockquote
             ref={versQuote}
             className="text-3xl md:text-5xl font-black italic text-white leading-tight tracking-tight drop-shadow-2xl"
@@ -303,7 +303,7 @@ export default function App() {
         </div>
       </section>
 
-      
+
       {/* ── 6. DOAÇÕES ────────────────────────────────── */}
       <section id="doacoes" className="py-32 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -343,34 +343,34 @@ export default function App() {
                     hover:scale-[1.015]
                     hover:shadow-[0_35px_80px_rgba(0,0,0,0.22)]
                   ">
-                {opt.img && (
-                  <img
-                    src={opt.img}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    alt=""
-                  />
-                )}
-                <div className="absolute inset-0 bg-[var(--navy)]/40 rounded-[48px]" />
+                  {opt.img && (
+                    <img
+                      src={opt.img}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      alt=""
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-[var(--navy)]/40 rounded-[48px]" />
 
-                <div className="relative z-10 space-y-6">
-                  <span className="text-[var(--gold)] text-lg font-black uppercase tracking-widest block drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    {opt.name}
-                  </span>
-                  <div className="text-7xl font-black text-white tracking-tighter drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                    R$&nbsp;{opt.amount}
+                  <div className="relative z-10 space-y-6">
+                    <span className="text-[var(--gold)] text-lg font-black uppercase tracking-widest block drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      {opt.name}
+                    </span>
+                    <div className="text-7xl font-black text-white tracking-tighter drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                      R$&nbsp;{opt.amount}
+                    </div>
+                    <p className="text-base text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      {opt.description}
+                    </p>
                   </div>
-                  <p className="text-base text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    {opt.description}
-                  </p>
-                </div>
 
-                <button
-                  onClick={() => window.open(opt.link, '_blank', 'noopener,noreferrer')}
-                  className="relative z-10 mt-10 w-full py-5 bg-[var(--gold)] text-[var(--navy)] rounded-2xl font-black text-xl uppercase shadow-lg hover:brightness-110 transition-all cursor-pointer"
-                >
-                  DOAR AGORA
-                </button>
-              </div>
+                  <button
+                    onClick={() => window.open(opt.link, '_blank', 'noopener,noreferrer')}
+                    className="relative z-10 mt-10 w-full py-5 bg-[var(--gold)] text-[var(--navy)] rounded-2xl font-black text-xl uppercase shadow-lg hover:brightness-110 transition-all cursor-pointer"
+                  >
+                    DOAR AGORA
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -415,33 +415,87 @@ export default function App() {
       </section>
 
       {/* ── 5. Patrocinadores ───────────────────────────── */}
-      <section id="patrocinadores" className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6">
+      <section
+        id="patrocinadores"
+        className="py-28 px-6 bg-[#f5f5f5]"
+      >
+        <div className="max-w-7xl mx-auto text-center mb-16">
           <h2
             ref={leadTitle}
-            className="text-5xl md:text-7xl font-black text-[var(--navy)] uppercase tracking-tighter leading-none text-center md:text-left"
+            className="text-4xl md:text-6xl font-extrabold text-[var(--navy)] mb-6"
           >
-            Patrocinadores
+            Seja um parceiro da Geração Eleita
           </h2>
-          
+
+          <p
+            ref={leadSub}
+            className="max-w-3xl mx-auto text-lg md:text-xl text-gray-500 leading-relaxed"
+          >
+            Torne-se uma empresa parceira e ajude a transformar
+            realidades em cidadania e sonhos em gols para milhares
+            de crianças.
+          </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
-          {sponsors.map((Sponsors, i) => (
+        {/* GRID DOS PATROCINADORES */}
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+          {sponsors.map((sponsor, i) => (
             <div
-              key={Sponsors.name}
+              key={sponsor.name}
               ref={i === 0 ? lead1 : lead2}
-              className="group text-center md:text-left"
+              className="
+                w-full
+                max-w-[220px]
+                bg-white
+                rounded-2xl
+                h-36
+                flex
+                items-center
+                justify-center
+                p-6
+              "
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-[32px] mb-6 transition-all duration-500 shadow-xl border border-gray-100">
-                <ImageWithFallback
-                  src={Sponsors.image}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <h4 className="text-2xl font-black text-[var(--navy)] uppercase mb-1">{Sponsors.name}</h4>
+              <ImageWithFallback
+                src={sponsor.image}
+                alt={sponsor.name}
+                className="
+            max-h-16
+            w-auto
+            object-contain
+            opacity-80
+            transition-all
+            duration-300
+            hover:grayscale-0
+            hover:opacity-100
+          "
+              />
             </div>
           ))}
+        </div>
+
+        {/* CTA FINAL */}
+        <div className="text-center mt-20">
+          <p className="text-gray-500 text-lg mb-6">
+            Entre em contato e seja nosso parceiro
+          </p>
+
+          <a
+            href="https://wa.me/75992975185"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+            inline-block
+            bg-emerald-500
+            hover:bg-emerald-600
+            text-white
+            font-bold
+            px-8
+            py-4
+            rounded-xl
+            transition-all
+            duration-300
+            "> SAIBA MAIS
+          </a>
         </div>
       </section>
 
@@ -467,7 +521,7 @@ export default function App() {
                   <Instagram size={20} />
                 </a>
                 <a
-                  href="https://wa.me/SEUNUMERO"
+                  href="https://wa.me/75992975185"
                   target="_blank" rel="noopener noreferrer"
                   className="p-3 bg-white/5 rounded-full hover:bg-[#25D366] hover:text-white transition-all"
                 >
@@ -480,8 +534,8 @@ export default function App() {
               <h4 className="text-xs font-black uppercase tracking-widest text-[var(--gold)]">Explore</h4>
               <ul className="space-y-4 font-black uppercase text-sm">
                 <li><a href="#historia" className="hover:text-[var(--gold)] transition-colors">Nossa História</a></li>
-                <li><a href="#lideres"  className="hover:text-[var(--gold)] transition-colors">Nossos Líderes</a></li>
-                <li><a href="#doacoes"  className="hover:text-[var(--gold)] transition-colors">Doações</a></li>
+                <li><a href="#lideres" className="hover:text-[var(--gold)] transition-colors">Nossos Líderes</a></li>
+                <li><a href="#doacoes" className="hover:text-[var(--gold)] transition-colors">Doações</a></li>
               </ul>
             </div>
 
@@ -494,7 +548,7 @@ export default function App() {
                 </li>
                 <li className="flex items-start gap-4">
                   <Phone className="text-[var(--gold)] shrink-0" size={20} />
-                  <span className="font-bold opacity-80">(XX) XXXXX-XXXX</span>
+                  <span className="font-bold opacity-80">(75) 99297-5185</span>
                 </li>
                 <li className="flex items-start gap-4">
                   <MapPin className="text-[var(--gold)] shrink-0" size={20} />
